@@ -1,0 +1,108 @@
+<html>
+<head>
+	<title>Admin Login</title>
+	<script>
+
+	function check()
+	{
+		var name=document.admin.t1.value;
+		if(name=="")
+		{
+			alert("username not entered!");
+			document.admin.t1.focus();
+			return false;	
+		}
+		var password=document.admin.p1.value;
+		if(password=="")
+		{
+			alert("password not entered!");
+			document.admin.p1.focus();
+			return false;
+		}
+		return true;
+	}
+	</script>
+
+	<style>
+	* {padding: 0;
+	   margin: 0;
+	   }
+	body{
+		
+		background: url('login-image.jpeg');
+		height: 100%;
+		background-size: cover;
+		background-repeat: no-repeat; 
+		background-position: center;
+	}
+	.loginbox{
+		width: 360px;
+		height: 450px;
+		background: #fff;
+		color: #000;
+		top: 50%;
+		left: 50%;
+		position: absolute;
+		transform: translate(-50%,-50%);
+		box-sizing: border-box;
+		padding: 50px 30px;
+	}
+	h1{
+		margin: 0;
+		font-size: 25px;
+		text-align: center;
+		padding: 30px;
+	}
+	.loginbox p{
+		margin:0;
+		padding:0;
+		font-weight: bold;
+		font-size: 20px;
+	}
+	.loginbox input{
+		width:100%;
+		margin-bottom: 20px;
+		
+	}
+	.loginbox input[type="text"],input[type="password"]
+	{
+		border:none;
+		border-bottom:1px solid #000;
+		background: transparent;
+		outline: none;
+		height: 40px;
+		font-size:16px;
+	}
+	.loginbox input[type="submit"]
+	{
+		border: none;
+		outline: none;
+		height: 40px;
+		background: #fb2525;
+		color: #fff;
+		font-size: 18px;
+		
+	}
+	</style>
+</head>
+
+<body>
+
+	<div class="loginbox">
+
+	<h1>Admin Login</h1>
+	<form action="adminlogin.php" method="post" name="admin">
+			
+			<p>Admin ID</p>
+			 <input type="text" name="admin_id" id="t1" value=""><br/> 
+			
+			<p>Password</p>
+			 <input type="password" name="admin_password" id="p1" value=""><br/>
+			
+			<input type="submit" name="login" id="b1" value="LOGIN" onclick="return check()">
+	</form>
+	</div>
+</body>
+
+</html>
+

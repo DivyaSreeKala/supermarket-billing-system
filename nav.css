@@ -1,0 +1,35 @@
+* {   margin: 0 ;
+      padding:0;
+      
+}
+
+.topnav {
+  position: relative;
+  z-index:9999;
+  display: flex;
+  flex-wrap: nowrap;
+  list-style-type: none;
+  margin: 0%;
+  padding: 0%;
+  overflow: hidden;
+  background-color: #98e698;
+}
+
+
+ul.topnav li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 10px 8px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #c1f0c1;}
+
+ul.topnav li a.active {background-color: #28a428;}
+
+@media screen and (max-width: 1200px) {
+    ul li a {
+        font-size: 14px;
+    }
+}
